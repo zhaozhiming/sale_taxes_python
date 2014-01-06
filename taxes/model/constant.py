@@ -9,3 +9,6 @@ class Constant(object):
     BASE_TAXES = 0.1
     IMPORTED_TAXES = 0.05
     TAX_RATE_MIN_RANGE = 0.05
+    IMPORTED_TEXT_IDENTIFY = "imported"
+    SALES_TAXES_TEXT_IDENTIFY = "Sales Taxes: "
+    TOTAL_TEXT_IDENTIFY = "Total: "

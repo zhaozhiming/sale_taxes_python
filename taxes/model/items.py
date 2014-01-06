@@ -1,3 +1,6 @@
+from model.constant import Constant
+
+
 class Items:
     def __init__(self, items):
         self.items = items
@@ -6,10 +9,10 @@ class Items:
         tax = 0
         for item in self.items:
             tax += item.tax()
-        return str("Sales Taxes: %.2f" % tax)
+        return str((Constant.SALES_TAXES_TEXT_IDENTIFY + "%.2f") % tax)
 
     def total(self):
         total = 0
         for item in self.items:
             total += item.price()
-        return str("Total: %.2f" % total)
+        return str((Constant.TOTAL_TEXT_IDENTIFY + "%.2f") % total)

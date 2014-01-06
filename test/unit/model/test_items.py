@@ -1,4 +1,5 @@
 import unittest
+from model.constant import Constant
 from model.item import Item
 from model.items import Items
 
@@ -21,22 +22,28 @@ class ItemsTestCase(unittest.TestCase):
         self.scenario3_items = Items([item6, item7, item8, item9])
 
     def test_scenario_1_tax(self):
-        self.assertEqual(self.scenario1_items.tax(), "Sales Taxes: 1.50")
+        self.assertEqual(self.scenario1_items.tax(),
+                         Constant.SALES_TAXES_TEXT_IDENTIFY + "1.50")
 
     def test_scenario_1_total(self):
-        self.assertEqual(self.scenario1_items.total(), "Total: 29.83")
+        self.assertEqual(self.scenario1_items.total(),
+                         Constant.TOTAL_TEXT_IDENTIFY + "29.83")
 
     def test_scenario_2_tax(self):
-        self.assertEqual(self.scenario2_items.tax(), "Sales Taxes: 7.65")
+        self.assertEqual(self.scenario2_items.tax(),
+                         Constant.SALES_TAXES_TEXT_IDENTIFY + "7.65")
 
     def test_scenario_2_total(self):
-        self.assertEqual(self.scenario2_items.total(), "Total: 65.15")
+        self.assertEqual(self.scenario2_items.total(),
+                         Constant.TOTAL_TEXT_IDENTIFY + "65.15")
 
     def test_scenario_3_tax(self):
-        self.assertEqual(self.scenario3_items.tax(), "Sales Taxes: 6.70")
+        self.assertEqual(self.scenario3_items.tax(),
+                         Constant.SALES_TAXES_TEXT_IDENTIFY + "6.70")
 
     def test_scenario_3_total(self):
-        self.assertEqual(self.scenario3_items.total(), "Total: 74.68")
+        self.assertEqual(self.scenario3_items.total(),
+                         Constant.TOTAL_TEXT_IDENTIFY + "74.68")
 
 
 if __name__ == '__main__':

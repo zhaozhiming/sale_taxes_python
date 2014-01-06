@@ -1,7 +1,7 @@
-from model.base_tax import BaseTax
 from model.constant import Constant
-from model.imported_tax import ImportedTax
-from model.no_tax import NoTax
+from model.tax.base_tax import BaseTax
+from model.tax.imported_tax import ImportedTax
+from model.tax.no_tax import NoTax
 
 
 class TaxFactory:

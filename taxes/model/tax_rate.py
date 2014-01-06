@@ -1,4 +1,4 @@
-from model.tax_factory import TaxFactory
+from model.tax.tax_factory import TaxFactory
 
 
 class TaxRate():

@@ -1,5 +1,5 @@
 from model.constant import Constant
-from model.no_tax import NoTax
+from model.tax.no_tax import NoTax
 
 
 class ImportedTax(NoTax):

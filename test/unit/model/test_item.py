@@ -18,6 +18,16 @@ class ItemTestCase(unittest.TestCase):
         result = self.item.sale()
         self.assertEqual(result, "1 chocolate bar: 0.85")
 
+    def test_1_imported_box_of_chocolates_at_10_dot_00(self):
+        self.item = Item("1 imported box of chocolates at 10.00")
+        result = self.item.sale()
+        self.assertEqual(result, "1 imported box of chocolates: 10.50")
+
+    def test_1_imported_bottle_of_perfume_at_47_dot_50(self):
+        self.item = Item("1 imported bottle of perfume at 47.50")
+        result = self.item.sale()
+        self.assertEqual(result, "1 imported bottle of perfume: 54.65")
+
 
 if __name__ == '__main__':
     unittest.main()

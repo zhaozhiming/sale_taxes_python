@@ -5,6 +5,7 @@ class Constant(object):
     PRICE_INDEX = 5
     BOOK = ["book"]
     FOOD = ["chocolate bar", "box of chocolates"]
+    MEDICAL = ["packet of headache pills"]
     BASE_TAXES = 0.1
     IMPORTED_TAXES = 0.05
     TAX_RATE_MIN_RANGE = 0.05

@@ -28,6 +28,26 @@ class ItemTestCase(unittest.TestCase):
         result = self.item.sale()
         self.assertEqual(result, "1 imported bottle of perfume: 54.65")
 
+    def test_1_imported_bottle_of_perfume_at_27_dot_99(self):
+        self.item = Item("1 imported bottle of perfume at 27.99")
+        result = self.item.sale()
+        self.assertEqual(result, "1 imported bottle of perfume: 32.19")
+
+    def test_1_bottle_of_perfume_at_18_dot_99(self):
+        self.item = Item("1 bottle of perfume at 18.99")
+        result = self.item.sale()
+        self.assertEqual(result, "1 bottle of perfume: 20.89")
+
+    def test_1_packet_of_headache_pills_at_9_dot_75(self):
+        self.item = Item("1 packet of headache pills at 9.75")
+        result = self.item.sale()
+        self.assertEqual(result, "1 packet of headache pills: 9.75")
+
+    def test_1_box_of_imported_chocolates_at_11_dot_25(self):
+        self.item = Item("1 box of imported chocolates at 11.25")
+        result = self.item.sale()
+        self.assertEqual(result, "1 box of imported chocolates: 11.85")
+
 
 if __name__ == '__main__':
     unittest.main()

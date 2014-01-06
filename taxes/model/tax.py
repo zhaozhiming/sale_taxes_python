@@ -1,19 +1,15 @@
-BOOK = ["book"]
-FOOD = ["chocolate bar", "box of chocolates"]
-BASE_TAXES = 0.1
-IMPORTED_TAXES = 0.05
+from model.constant import Constant
 
 
 class Tax:
-    def __init__(self, item):
-        self.item = item
+    def __init__(self):
+        pass
 
-    def tax_rate(self):
-        imported = self.item.imported
-        name = self.item.name
+    def tax_rate(self, name):
         tax_rate = 0
-        if name not in BOOK + FOOD:
-            tax_rate += BASE_TAXES
-        if "imported" in imported:
-            tax_rate += IMPORTED_TAXES
+        item_name = name.replace("imported ", "")
+        if item_name not in Constant.BOOK + Constant.FOOD:
+            tax_rate += Constant.BASE_TAXES
+        if "imported" in name:
+            tax_rate += Constant.IMPORTED_TAXES
         return tax_rate

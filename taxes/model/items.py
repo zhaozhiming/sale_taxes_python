@@ -8,7 +8,7 @@ class Items:
     def tax(self):
         tax = 0
         for item in self.items:
-            tax += item.source_price * Tax(item).tax_rate()
+            tax += item.source_price * Tax().tax_rate(item.name)
         return str("Sales Taxes: %.2f" % tax)
 
     def total(self):

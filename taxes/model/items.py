@@ -3,7 +3,13 @@ class Items:
         self.items = items
 
     def tax(self):
+        tax = 0
+        for item in self.items:
+            tax += item.tax
+        return str("Sales Taxes: %.2f" % tax)
+
+    def total(self):
         total = 0
         for item in self.items:
-            total += item.tax
-        return str("Sales Taxes: %.2f" % total)
+            total += item.price
+        return str("Total: %.2f" % total)

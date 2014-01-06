@@ -20,6 +20,5 @@ class Item:
             self.price = round(price * 1.1, 2)
             self.tax = round(price * 0.1, 2)
 
-
     def sale(self):
-        return self.count + " " + self.name + ": " + str("%.2f" % self.price)
+        return str("%s %s: %.2f" % (self.count, self.name, self.price))

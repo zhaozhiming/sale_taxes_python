@@ -1,7 +1,7 @@
 from model.constant import Constant
 
 
-class Tax:
+class TaxRate:
     def __init__(self):
         pass
 

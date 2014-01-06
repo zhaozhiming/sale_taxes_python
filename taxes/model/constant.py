@@ -7,3 +7,4 @@ class Constant(object):
     FOOD = ["chocolate bar", "box of chocolates"]
     BASE_TAXES = 0.1
     IMPORTED_TAXES = 0.05
+    TAX_RATE_MIN_RANGE = 0.05

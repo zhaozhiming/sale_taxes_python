@@ -14,7 +14,9 @@ class Item:
         return str("%s %s: %.2f" % (self.count, self.name, self.price()))
 
     def tax(self):
-        return round(self.source_price * Tax().tax_rate(self.name), 2)
+        price = round(self.source_price * Tax().tax_rate(self.name), 2)
+        mod = price % Constant.TAX_RATE_MIN_RANGE
+        return price if mod == 0 else price + (Constant.TAX_RATE_MIN_RANGE - mod)
 
     def price(self):
         return round(self.source_price + self.tax(), 2)

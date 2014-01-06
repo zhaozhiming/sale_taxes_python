@@ -1,6 +1,3 @@
-from model.tax import Tax
-
-
 class Items:
     def __init__(self, items):
         self.items = items

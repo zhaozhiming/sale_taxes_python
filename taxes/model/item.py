@@ -12,8 +12,11 @@ class Item:
         self.count = match.group(1)
         self.name = match.group(2)
         self.price = match.group(4)
+        self.tax = 0
         if self.name not in BOOK + FOOD:
-            self.price = round(float(self.price) * 1.1, 2)
+            self.price = round(float(match.group(4)) * 1.1, 2)
+            self.tax = round(float(match.group(4)) * 0.1, 2)
+
 
     def sale(self):
-        return self.count + " " + self.name + ": " + str(self.price)
+        return self.count + " " + self.name + ": " + str("%.2f" % self.price)

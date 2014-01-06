@@ -13,5 +13,8 @@ class Item:
     def sale(self):
         return str("%s %s: %.2f" % (self.count, self.name, self.price()))
 
+    def tax(self):
+        return round(self.source_price * Tax().tax_rate(self.name), 2)
+
     def price(self):
-        return round(self.source_price * (1 + Tax().tax_rate(self.name)), 2)
+        return round(self.source_price + self.tax(), 2)
